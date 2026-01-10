@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies & Shows Analysis | Victor Foster</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sticky Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">VF</a>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <a href="index.html#projects" class="back-link">← Back to Projects</a>
+            <h1>Movies & Shows Data Analysis</h1>
+            <p class="hero-description">Comprehensive data analysis using pandas to explore a dataset of movies and TV shows, including cast information, genres, release years, and IMDb ratings</p>
+            <div class="project-meta">
+                <div class="project-tech">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Pandas</span>
+                    <span class="tech-badge">Jupyter Notebook</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/vfoster-repo/pandas-fundamentals-project" target="_blank" class="btn btn-primary">View on GitHub</a>
+                    <a href="../pandas-fundamentals-project/index.html" target="_blank" class="btn btn-secondary">View Notebook</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content">
+        <div class="container">
+            <div class="content-section">
+                <h2>Project Overview</h2>
+                <p>This project demonstrates fundamental data analysis skills including data cleaning and standardization, exploratory data analysis (EDA), data filtering and manipulation with pandas, custom function development for reusable analysis, and IMDb rating categorization and insights.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>Dataset</h2>
+                <p>The analysis uses the <code>movies_and_shows.csv</code> dataset, which contains comprehensive information about actors, characters, roles, titles, content types, release years, genres, and IMDb ratings and votes.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <h4>Data Cleaning</h4>
+                        <p>Standardized inconsistent column names, converted mixed-case headers to lowercase with underscores, and replaced special characters for consistency.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Custom Functions</h4>
+                        <p>Developed reusable functions like <code>get_actors_for_title()</code> to retrieve cast lists and <code>categorize_imdb_score()</code> to classify content quality.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Rating Categorization</h4>
+                        <p>Implemented a tiered rating system: Excellent (≥9.0), Good (7.0-8.9), Average (5.0-6.9), and Low (<5.0) for meaningful insights.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Technical Highlights</h2>
+                <h3>get_actors_for_title() Function</h3>
+                <p>Returns a comma-separated list of all actors for a given movie or show:</p>
+                <pre style="background: var(--light-gray); padding: 1rem; border-radius: 6px; overflow-x: auto;"><code>get_actors_for_title("Taxi Driver")
+# Returns: "Robert De Niro, Jodie Foster, Harvey Keitel, ..."</code></pre>
+
+                <h3>categorize_imdb_score() Function</h3>
+                <p>Categorizes movies/shows into quality tiers based on IMDb scores:</p>
+                <ul>
+                    <li><strong>Excellent:</strong> IMDb score ≥ 9.0</li>
+                    <li><strong>Good:</strong> IMDb score 7.0 - 8.9</li>
+                    <li><strong>Average:</strong> IMDb score 5.0 - 6.9</li>
+                    <li><strong>Low:</strong> IMDb score < 5.0</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Skills Demonstrated</h2>
+                <ul>
+                    <li>Pandas DataFrame manipulation and filtering</li>
+                    <li>Data cleaning and standardization techniques</li>
+                    <li>Custom function development for code reusability</li>
+                    <li>Exploratory data analysis (EDA)</li>
+                    <li>String manipulation and text processing</li>
+                    <li>Conditional logic and data categorization</li>
+                    <li>Jupyter Notebook documentation</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Technologies Used</h2>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python 3.x</span>
+                    <span class="skill-tag">Pandas</span>
+                    <span class="skill-tag">Jupyter Notebook</span>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Project Links</h2>
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                    <a href="https://github.com/vfoster-repo/pandas-fundamentals-project" target="_blank" class="btn btn-primary">GitHub Repository</a>
+                    <a href="../pandas-fundamentals-project/index.html" target="_blank" class="btn btn-secondary">Interactive Notebook</a>
+                    <a href="index.html#projects" class="btn btn-secondary">Back to Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Victor Foster. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

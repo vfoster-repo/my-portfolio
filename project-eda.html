@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instacart Market Basket Analysis | Victor Foster</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sticky Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">VF</a>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <a href="index.html#projects" class="back-link">← Back to Projects</a>
+            <h1>Instacart Market Basket Analysis</h1>
+            <p class="hero-description">An exploratory data analysis of customer shopping behavior using Instacart's grocery shopping dataset to provide actionable insights for inventory management, marketing strategies, and customer retention</p>
+            <div class="project-meta">
+                <div class="project-tech">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Pandas</span>
+                    <span class="tech-badge">Matplotlib</span>
+                    <span class="tech-badge">EDA</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/vfoster-repo/eda-analysis-project" target="_blank" class="btn btn-primary">View on GitHub</a>
+                    <a href="../eda-analysis-project/index.html" target="_blank" class="btn btn-secondary">View Notebook</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content">
+        <div class="container">
+            <div class="content-section">
+                <h2>Project Overview</h2>
+                <p>This project analyzes shopping patterns, product preferences, and customer reordering behavior from Instacart's transactional data. The analysis provides actionable insights for inventory management, marketing strategies, and customer retention through comprehensive exploratory data analysis (EDA).</p>
+            </div>
+
+            <div class="content-section">
+                <h2>Dataset</h2>
+                <p>The analysis uses five interconnected CSV files containing comprehensive grocery shopping data:</p>
+                <ul>
+                    <li><strong>instacart_orders.csv</strong> - Order history with timestamps (~479k orders)</li>
+                    <li><strong>products.csv</strong> - Product catalog (~50k products)</li>
+                    <li><strong>departments.csv</strong> - Department categories (21 departments)</li>
+                    <li><strong>aisles.csv</strong> - Aisle classifications (134 aisles)</li>
+                    <li><strong>order_products.csv</strong> - Order line items (~30M items)</li>
+                </ul>
+                <p><em>Note: All CSV files use semicolon (;) as the delimiter instead of comma.</em></p>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Questions Answered</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <h4>When do people shop?</h4>
+                        <p>Analysis of temporal patterns including time of day and day of week trends to identify peak shopping periods.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>What do people buy?</h4>
+                        <p>Identification of most popular products, frequently reordered items, and products commonly added to cart first.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>How do people shop?</h4>
+                        <p>Investigation of basket sizes, reorder frequency patterns, and the balance between new purchases vs. reorders.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Findings</h2>
+                
+                <h3>Shopping Patterns</h3>
+                <ul>
+                    <li><strong>Peak Hours:</strong> Most orders occur between 9:00 AM - 5:00 PM, with notable peaks at 10:00 AM and 3:00 PM</li>
+                    <li><strong>Weekly Trends:</strong> Orders concentrate at the beginning of the week (Sunday/Monday)</li>
+                    <li><strong>Reorder Frequency:</strong> Most customers reorder within 7 days, with common patterns at 7, 14, 21, and 28-day intervals</li>
+                </ul>
+
+                <h3>Product Insights</h3>
+                <ul>
+                    <li><strong>Top Categories:</strong> Fresh produce and dairy dominate both total orders and reorders</li>
+                    <li><strong>Basket Size:</strong> Typical orders contain 5-6 items, with most orders having 1-20 items</li>
+                    <li><strong>First Additions:</strong> Produce, dairy, and beverages are most commonly added to cart first</li>
+                </ul>
+
+                <h3>Customer Behavior</h3>
+                <ul>
+                    <li><strong>Reorder Rate:</strong> Customers show strong loyalty to specific products</li>
+                    <li><strong>Order Frequency:</strong> Most customers place 1-10 orders in the dataset</li>
+                    <li><strong>Subscription Patterns:</strong> Notable spike at 30-day intervals suggests subscription-based ordering</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Technical Approach</h2>
+                <ul>
+                    <li>Multi-file data integration and relationship mapping</li>
+                    <li>Temporal pattern analysis (time-based aggregations)</li>
+                    <li>Product categorization and segmentation</li>
+                    <li>Customer behavior clustering and pattern recognition</li>
+                    <li>Data visualization for insight communication</li>
+                    <li>Statistical distribution analysis</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Skills Demonstrated</h2>
+                <ul>
+                    <li>Exploratory Data Analysis (EDA) methodology</li>
+                    <li>Multi-table data integration and joins</li>
+                    <li>Temporal data analysis</li>
+                    <li>Customer behavior analytics</li>
+                    <li>Data visualization with Matplotlib</li>
+                    <li>Pattern recognition and insight extraction</li>
+                    <li>Business intelligence and actionable recommendations</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Technologies Used</h2>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python 3.x</span>
+                    <span class="skill-tag">Pandas</span>
+                    <span class="skill-tag">Matplotlib</span>
+                    <span class="skill-tag">Jupyter Notebook</span>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Business Impact</h2>
+                <p>This analysis provides actionable insights for:</p>
+                <ul>
+                    <li><strong>Inventory Management:</strong> Optimize stock levels based on peak shopping times and popular products</li>
+                    <li><strong>Marketing Strategy:</strong> Target promotions during high-traffic periods and focus on frequently reordered items</li>
+                    <li><strong>Customer Retention:</strong> Leverage reorder patterns to implement subscription models and personalized recommendations</li>
+                    <li><strong>Operational Planning:</strong> Staff scheduling aligned with peak demand hours and days</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Project Links</h2>
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                    <a href="https://github.com/vfoster-repo/eda-analysis-project" target="_blank" class="btn btn-primary">GitHub Repository</a>
+                    <a href="../eda-analysis-project/index.html" target="_blank" class="btn btn-secondary">Interactive Notebook</a>
+                    <a href="index.html#projects" class="btn btn-secondary">Back to Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Victor Foster. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

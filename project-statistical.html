@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megaline Statistical Analysis | Victor Foster</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sticky Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">VF</a>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <a href="index.html#projects" class="back-link">← Back to Projects</a>
+            <h1>Megaline Statistical Analysis</h1>
+            <p class="hero-description">A comprehensive statistical analysis comparing two prepaid mobile plans (Surf and Ultimate) for Megaline telecom operator to determine which plan generates more revenue and optimize advertising budget allocation</p>
+            <div class="project-meta">
+                <div class="project-tech">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Pandas</span>
+                    <span class="tech-badge">NumPy</span>
+                    <span class="tech-badge">SciPy</span>
+                    <span class="tech-badge">Statistics</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/vfoster-repo/statistical-analysis-project" target="_blank" class="btn btn-primary">View on GitHub</a>
+                    <a href="../statistical-analysis-project/index.html" target="_blank" class="btn btn-secondary">View Notebook</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content">
+        <div class="container">
+            <div class="content-section">
+                <h2>Project Overview</h2>
+                <p>This project analyzes customer behavior and revenue patterns from 500 Megaline clients during 2018. The analysis examines usage patterns (calls, messages, and internet data) across two prepaid plans to provide data-driven insights for the commercial department.</p>
+                <p>The project employs rigorous statistical hypothesis testing to validate findings and ensure recommendations are backed by statistically significant evidence.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Questions Addressed</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <h4>Revenue Comparison</h4>
+                        <p>Which prepaid plan (Surf or Ultimate) generates more revenue for the company?</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Usage Patterns</h4>
+                        <p>How do customer usage patterns differ between the two plans in terms of calls, messages, and data?</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Geographic Analysis</h4>
+                        <p>Are there significant revenue differences between geographic regions?</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Marketing Strategy</h4>
+                        <p>What data-driven recommendations can guide advertising budget allocation?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Dataset</h2>
+                <p>The analysis uses five interconnected datasets:</p>
+                <ul>
+                    <li><strong>megaline_plans.csv</strong> - Plan specifications and pricing structures</li>
+                    <li><strong>megaline_users.csv</strong> - Customer demographic information</li>
+                    <li><strong>megaline_calls.csv</strong> - Call duration records</li>
+                    <li><strong>megaline_messages.csv</strong> - SMS message counts</li>
+                    <li><strong>megaline_internet.csv</strong> - Mobile data usage records</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Analysis Workflow</h2>
+                <ol>
+                    <li><strong>Data Loading & Exploration</strong> - Import and examine datasets from multiple sources</li>
+                    <li><strong>Data Cleaning</strong> - Handle missing values, correct data types, and prepare data for analysis</li>
+                    <li><strong>Feature Engineering</strong> - Calculate monthly usage metrics and revenue per customer</li>
+                    <li><strong>Exploratory Analysis</strong> - Analyze customer behavior patterns and usage distributions</li>
+                    <li><strong>Statistical Testing</strong> - Hypothesis testing to validate findings with statistical rigor</li>
+                    <li><strong>Conclusions</strong> - Data-driven recommendations for business strategy</li>
+                </ol>
+            </div>
+
+            <div class="content-section">
+                <h2>Statistical Methodology</h2>
+                <p>The project employs rigorous statistical hypothesis testing to ensure reliable conclusions:</p>
+                <ul>
+                    <li><strong>Test Type:</strong> Independent samples t-tests for comparing mean revenues between groups</li>
+                    <li><strong>Significance Level (α):</strong> 0.05 (95% confidence level)</li>
+                    <li><strong>Null Hypothesis Formulation:</strong> No significant difference in revenues between compared groups</li>
+                    <li><strong>Alternative Hypothesis:</strong> Significant difference exists in revenues between groups</li>
+                    <li><strong>P-value Interpretation:</strong> Decision making based on statistical significance thresholds</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Findings</h2>
+                <p>The analysis reveals statistically significant differences in revenue between the Surf and Ultimate plans, providing actionable insights for marketing strategy optimization. Detailed findings include:</p>
+                <ul>
+                    <li>Revenue comparison between Surf and Ultimate plan subscribers</li>
+                    <li>Usage pattern differences across plan types</li>
+                    <li>Regional revenue variations and their statistical significance</li>
+                    <li>Customer behavior segmentation by plan type</li>
+                    <li>Recommendations for targeted marketing and resource allocation</li>
+                </ul>
+                <p><em>Note: Detailed statistical results and visualizations are available in the complete Jupyter notebook.</em></p>
+            </div>
+
+            <div class="content-section">
+                <h2>Skills Demonstrated</h2>
+                <ul>
+                    <li>Statistical hypothesis testing (t-tests)</li>
+                    <li>Multi-table data integration and joins</li>
+                    <li>Feature engineering for revenue calculation</li>
+                    <li>Data cleaning and preprocessing</li>
+                    <li>Exploratory data analysis (EDA)</li>
+                    <li>Data visualization for statistical insights</li>
+                    <li>Business intelligence and strategic recommendations</li>
+                    <li>P-value interpretation and statistical significance assessment</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Technologies Used</h2>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python 3.x</span>
+                    <span class="skill-tag">Pandas</span>
+                    <span class="skill-tag">NumPy</span>
+                    <span class="skill-tag">Matplotlib</span>
+                    <span class="skill-tag">SciPy</span>
+                    <span class="skill-tag">Jupyter Notebook</span>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Business Impact</h2>
+                <p>This analysis provides data-driven insights for:</p>
+                <ul>
+                    <li><strong>Advertising Budget Allocation:</strong> Optimize marketing spend based on revenue-generating plan performance</li>
+                    <li><strong>Plan Optimization:</strong> Adjust pricing and features based on usage patterns</li>
+                    <li><strong>Regional Strategy:</strong> Tailor marketing approaches to geographic revenue patterns</li>
+                    <li><strong>Customer Segmentation:</strong> Target high-value customer segments more effectively</li>
+                    <li><strong>Revenue Forecasting:</strong> Predict future revenue based on customer behavior patterns</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Project Links</h2>
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                    <a href="https://github.com/vfoster-repo/statistical-analysis-project" target="_blank" class="btn btn-primary">GitHub Repository</a>
+                    <a href="../statistical-analysis-project/index.html" target="_blank" class="btn btn-secondary">Interactive Notebook</a>
+                    <a href="index.html#projects" class="btn btn-secondary">Back to Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Victor Foster. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
