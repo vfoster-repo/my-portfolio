@@ -87,14 +87,6 @@ Once you add your profile photo with the correct filename, remove the `.profile-
 - **GitHub:** [@vfoster-repo](https://github.com/vfoster-repo)
 - **LinkedIn:** [Victor Foster](https://linkedin.com/in/vfoster-connect)
 
-## Customization
-
-To update content:
-1. Edit section content in `index.html`
-2. Modify project details in respective `project-*.html` files
-3. Adjust colors in CSS variables at the top of `styles.css`
-4. Add your profile photo as `profile-photo.jpg` (300×300px)
-
 ## Browser Support
 
 - Chrome (latest)
