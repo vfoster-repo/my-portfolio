@@ -14,25 +14,24 @@ This portfolio website features a clean, light theme with gray and blue accents,
 - **Modern UI** - Clean, minimal design with smooth animations and transitions
 - **Light Theme** - Professional light color scheme with blue and gray accents
 
-## Structure
+## Repository Structure
 
 ```
 my-portfolio/
-├── index.html              # Main landing page
-├── styles.css              # Complete stylesheet
-├── script.js               # JavaScript for smooth scrolling and animations
-├── README.md               # This file
-└── context/                # Content reference files
-    ├── attention-grabber.md
-    ├── contact-info.md
-    ├── experience-skills.md
-    ├── hard-skills.md
-    ├── philosophy.md
-    ├── project-links.md
-    └── stategy,md
+│
+├── README.md
+├── CNAME
+├── .gitignore
+├── index.html
+├── styles.css
+├── script.js
+├── profile-photo.png
+├── project-eda.html
+├── project-pandas.html
+└── project-statistical.html
 ```
 
-**Note:** Project notebooks are accessed directly from their respective project folders. Each notebook includes a sticky back navigation bar to return to the portfolio.
+**Note:** Project notebooks are accessed directly from their respective project repositories. Each notebook includes a sticky back navigation bar to return to the portfolio.
 
 ## Sections
 
@@ -43,21 +42,14 @@ my-portfolio/
 - **Skills Section** - Technical skills organized by category
 - **Contact Section** - Contact information and social links
 
-### Project Notebooks
-Each project notebook opens in the same window and includes:
-- **Sticky Back Navigation** - Persistent "Back to Portfolio" link at the top
-- **Full Interactive Notebook** - Complete analysis with code, visualizations, and insights
-- **Professional Formatting** - Clean, readable Jupyter notebook HTML export
-
 ## Profile Photo
 
-**Current Status:** Placeholder displayed  
-**Required Image:** `profile-photo.jpg`  
-**Dimensions:** 300×300 pixels (square)  
-**Format:** JPG or PNG  
-**Location:** Place in `/my-portfolio/` directory
+**File:** `profile-photo.png`  
+**Status:** ✓ Integrated  
+**Dimensions:** 1000x1000 pixels (square)  
+**Format:** PNG
 
-Once you add your profile photo with the correct filename, remove the `.profile-placeholder` element's display or update the CSS to show `.profile-photo` by default.
+The profile photo is displayed in the hero section of the portfolio and provides a professional visual introduction.
 
 ## Featured Projects
 
