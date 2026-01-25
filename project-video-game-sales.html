@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Game Sales Forecasting | Victor Foster</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sticky Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">VF</a>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-detail-hero">
+        <div class="container">
+            <a href="all-projects.html" class="back-link">← Back to Projects</a>
+            <h1 class="project-detail-title">Video Game Sales Forecasting</h1>
+            <p class="project-detail-description">Forecasting 2017 sales trends for strategic advertising campaigns using historical video game sales data. Analyzing platform lifecycles, genre performance, and regional market preferences to identify winning patterns for the online store Ice.</p>
+            <div class="project-detail-tech">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Pandas</span>
+                <span class="tech-badge">NumPy</span>
+                <span class="tech-badge">Matplotlib</span>
+                <span class="tech-badge">Seaborn</span>
+                <span class="tech-badge">SciPy</span>
+            </div>
+            <div class="project-detail-buttons">
+                <a href="https://github.com/vfoster-repo/video-game-sales-project" target="_blank" class="btn btn-small btn-primary">View on GitHub</a>
+                <a href="https://vfoster-repo.github.io/video-game-sales-project/" class="btn btn-small btn-secondary">View Notebook</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content">
+        <div class="container">
+            <div class="content-section">
+                <h2>Project Overview</h2>
+                <p><strong>Business Context:</strong> Understanding the gaming industry landscape for investment or publishing decisions.</p>
+                <p>This project analyzes historical video game sales data from 2013-2016 to identify patterns that determine a game's success. Working with data from the online store Ice, I analyzed 16,715 video games across multiple platforms, genres, and regional markets to forecast trends for 2017 advertising campaigns.</p>
+                <p>The analysis combines exploratory data analysis, trend forecasting, and statistical hypothesis testing to provide actionable recommendations for marketing strategy.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>What This Demonstrates</h2>
+                
+                <h3>Learning Challenge</h3>
+                <ul>
+                    <li>Gaming industry dynamics and platform ecosystems</li>
+                    <li>Time-series analysis across multiple regions</li>
+                    <li>Handling categorical data (genres, platforms, publishers)</li>
+                </ul>
+
+                <h3>Problem-Solving Process</h3>
+                <ol>
+                    <li><strong>Market Research:</strong> Investigated how the gaming industry works (platforms, regions, genres)</li>
+                    <li><strong>Multi-Dimensional Analysis:</strong> Examined sales across time, geography, and product categories</li>
+                    <li><strong>Trend Identification:</strong> Discovered platform lifecycles and regional preferences</li>
+                    <li><strong>Insight Synthesis:</strong> Connected multiple findings into a coherent market narrative</li>
+                </ol>
+
+                <h3>Professional Outcome</h3>
+                <ul>
+                    <li>Delivered insights that could inform publishing strategy, platform prioritization, or market entry decisions</li>
+                    <li>Demonstrated ability to quickly become conversant in a new industry</li>
+                    <li>Created visualizations that make 40+ years of data immediately accessible</li>
+                </ul>
+
+                <h3>Tools Utilized</h3>
+                <ul>
+                    <li>VS Code with GitHub Copilot for development</li>
+                    <li>Jupyter Notebook for interactive analysis</li>
+                    <li>Git/GitHub for version control</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Objectives</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <h4>Platform Analysis</h4>
+                        <p>Identify gaming platforms with growth potential for 2017 based on lifecycle analysis</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Genre Performance</h4>
+                        <p>Analyze genre performance and profitability across different markets</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Regional Markets</h4>
+                        <p>Understand regional preferences in North America, Europe, and Japan</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Hypothesis Testing</h4>
+                        <p>Test hypotheses about user ratings across platforms and genres statistically</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Dataset</h2>
+                <p>The analysis uses comprehensive video game sales data spanning 1980-2016:</p>
+                <ul>
+                    <li><strong>Total Records:</strong> 16,715 video games</li>
+                    <li><strong>Time Period:</strong> 1980-2016 (focused on 2013-2016 for forecasting)</li>
+                    <li><strong>Platforms:</strong> Multiple gaming platforms including PS4, XOne, PC, 3DS, and more</li>
+                    <li><strong>Regions:</strong> North America, Europe, Japan, and other markets</li>
+                    <li><strong>Metrics:</strong> Sales data, critic scores, user scores, ESRB ratings</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Analysis Workflow</h2>
+                <ol>
+                    <li><strong>Data Preparation</strong> - Load, clean, and preprocess sales data</li>
+                    <li><strong>Exploratory Analysis</strong> - Examine platform lifecycles and genre distributions</li>
+                    <li><strong>Platform Analysis</strong> - Identify growing and declining platforms</li>
+                    <li><strong>Profitability Analysis</strong> - Determine most profitable genres and platforms</li>
+                    <li><strong>Regional Analysis</strong> - Compare market preferences across regions</li>
+                    <li><strong>Hypothesis Testing</strong> - Statistical validation of user rating patterns</li>
+                    <li><strong>Recommendations</strong> - Data-driven marketing strategy for 2017</li>
+                </ol>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Findings</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <h4>PS4 Dominance</h4>
+                        <p>49% growth and 314M in total sales (2013-2016), leading platform for 2017 campaigns</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Platform Lifecycle</h4>
+                        <p>Gaming platforms typically last 10-12 years before rapid decline; generational transition observed</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Action Games Lead</h4>
+                        <p>Action games dominate with 29.5% global market share; Shooters have highest average sales</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Regional Differences</h4>
+                        <p>PS4 leads in NA/EU; 3DS dominates Japan (48% market share); RPGs preferred in Japan (36%)</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Review Correlation</h4>
+                        <p>Moderate positive correlation (0.40) between critic scores and sales</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Rating Impact</h4>
+                        <p>Mature-rated games generate highest total sales but Teen/Everyone have broader appeal</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Statistical Testing</h2>
+                <p>The project employs hypothesis testing to validate key assumptions:</p>
+                <ul>
+                    <li><strong>Hypothesis 1:</strong> Average user ratings of Xbox One and PC platforms are the same</li>
+                    <li><strong>Hypothesis 2:</strong> Average user ratings for Action and Sports genres are different</li>
+                    <li><strong>Methodology:</strong> Independent samples t-tests with α = 0.05</li>
+                    <li><strong>Results:</strong> Both hypotheses tested with statistical rigor using SciPy</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Strategic Recommendations</h2>
+                <p>Data-driven recommendations for 2017 advertising campaigns:</p>
+                <ol>
+                    <li><strong>Focus on PS4:</strong> Prioritize PS4 platform showing strong growth trajectory</li>
+                    <li><strong>Action & Shooter Genres:</strong> Emphasize high-performing genres in marketing</li>
+                    <li><strong>Regional Customization:</strong> Tailor campaigns to regional preferences (RPGs for Japan)</li>
+                    <li><strong>Quality Signaling:</strong> Feature games with high critic scores prominently</li>
+                    <li><strong>Rating Segmentation:</strong> Balance Mature-rated blockbusters with broader-appeal titles</li>
+                    <li><strong>Multi-platform Strategy:</strong> Consider XOne for North American market penetration</li>
+                    <li><strong>New Releases:</strong> Prioritize recent releases (2015-2016) for maximum impact</li>
+                    <li><strong>Lifecycle Awareness:</strong> Avoid marketing older-generation platforms (PS3, X360)</li>
+                </ol>
+            </div>
+
+            <div class="content-section">
+                <h2>Skills Demonstrated</h2>
+                <ul>
+                    <li>Time series analysis and trend forecasting</li>
+                    <li>Multi-dimensional data analysis (platform, genre, region)</li>
+                    <li>Statistical hypothesis testing with SciPy</li>
+                    <li>Data cleaning and preprocessing of large datasets</li>
+                    <li>Exploratory data analysis (EDA)</li>
+                    <li>Data visualization with Matplotlib and Seaborn</li>
+                    <li>Correlation analysis and feature relationships</li>
+                    <li>Business strategy formulation from data insights</li>
+                    <li>Regional market analysis and segmentation</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Technologies Used</h2>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python 3.x</span>
+                    <span class="skill-tag">Pandas</span>
+                    <span class="skill-tag">NumPy</span>
+                    <span class="skill-tag">Matplotlib</span>
+                    <span class="skill-tag">Seaborn</span>
+                    <span class="skill-tag">SciPy</span>
+                    <span class="skill-tag">Jupyter Notebook</span>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Business Impact</h2>
+                <p>This analysis provides strategic value through:</p>
+                <ul>
+                    <li><strong>Campaign Optimization:</strong> Data-driven platform and genre selection for 2017 advertising</li>
+                    <li><strong>Budget Allocation:</strong> Focus resources on high-growth platforms and genres</li>
+                    <li><strong>Regional Strategy:</strong> Customize marketing approaches for NA, EU, and Japan markets</li>
+                    <li><strong>Product Selection:</strong> Identify which games to feature prominently in campaigns</li>
+                    <li><strong>Risk Mitigation:</strong> Avoid declining platforms and low-performing genres</li>
+                    <li><strong>Revenue Forecasting:</strong> Predict potential returns from different market segments</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Project Links</h2>
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                    <a href="https://github.com/vfoster-repo/video-game-sales-project" target="_blank" class="btn btn-small btn-primary">GitHub</a>
+                    <a href="https://vfoster-repo.github.io/video-game-sales-project/" class="btn btn-small btn-secondary">View Notebook</a>
+                    <a href="all-projects.html" class="btn btn-small btn-secondary">Back to Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Victor Foster. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
