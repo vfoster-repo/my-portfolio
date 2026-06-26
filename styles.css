@@ -352,6 +352,32 @@ section {
     gap: 1rem;
 }
 
+/* ===== Project Category Headers (All Projects page) ===== */
+.project-category-header {
+    grid-column: 1 / -1;
+    padding: 0.5rem 0 0.75rem;
+    border-bottom: 2px solid var(--primary-blue);
+    margin-bottom: 0.5rem;
+    margin-top: 2rem;
+}
+
+.project-category-header:first-child {
+    margin-top: 0;
+}
+
+.project-category-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    letter-spacing: 0.02em;
+}
+
+.project-category-subtitle {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 0.2rem;
+}
+
 /* ===== Skills Section ===== */
 .skills {
     background-color: var(--white);

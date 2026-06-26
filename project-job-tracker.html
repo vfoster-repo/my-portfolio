@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Tracker — AI Assistant | Victor Foster</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sticky Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">VF</a>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-detail-hero">
+        <div class="container">
+            <a href="all-projects.html" class="back-link">← Back to Projects</a>
+            <h1 class="project-detail-title">Job Tracker — AI Assistant</h1>
+            <p class="project-detail-description">A self-hostable job application tracker where every interaction — adding listings, updating statuses, recording notes — happens entirely through conversation with an embedded AI assistant. The UI is a real-time dashboard with a clean filterable table and a rich detail panel for every opportunity.</p>
+            <div class="project-detail-tech">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">FastAPI</span>
+                <span class="tech-badge">Claude AI</span>
+                <span class="tech-badge">HTML/CSS/JS</span>
+                <span class="tech-badge">Uvicorn</span>
+                <span class="tech-badge">PWA</span>
+            </div>
+            <div class="project-detail-buttons">
+                <a href="https://vfoster-repo.github.io/job-tracker-app/" target="_blank" class="btn btn-small btn-primary">Live Demo →</a>
+                <a href="https://github.com/vfoster-repo/job-tracker-app" target="_blank" class="btn btn-small btn-secondary">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content">
+        <div class="container">
+
+            <div class="content-section">
+                <h2>Project Overview</h2>
+                <p>Job Tracker is a full-stack web application that rethinks the job search workflow. Instead of filling out forms and manually updating fields, every action is handled through natural language chat with an AI assistant powered by Claude. The result is a tracker that feels more like a conversation with a knowledgeable assistant than a database entry tool.</p>
+                <p>Built as a personal project outside of coursework, this demonstrates practical full-stack development — a FastAPI backend with an agentic AI loop, a live-updating vanilla JS frontend, and a flat-file data layer that keeps the setup dead simple. The demo is pre-loaded with sample CDL-A job search data from the DFW/Weatherford TX area.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>What This Demonstrates</h2>
+
+                <h3>Engineering Decisions</h3>
+                <ul>
+                    <li>Designed an agentic AI loop where Claude uses structured tools to read and write data — not just generate text</li>
+                    <li>Rebuilt the system prompt on every request with current user profile injected at the top, giving the AI persistent context without a memory layer</li>
+                    <li>Chose flat JSON files over a database to keep self-hosting frictionless</li>
+                    <li>Built the frontend in vanilla HTML/CSS/JS — no framework — to keep the footprint minimal and the demo deployable to GitHub Pages</li>
+                </ul>
+
+                <h3>Problem-Solving Process</h3>
+                <ol>
+                    <li><strong>Interface Design:</strong> Inverted the typical CRUD UI — the table is read-only and chat is the only input surface</li>
+                    <li><strong>Agentic Loop:</strong> Implemented Claude's tool-use API so the AI can chain multiple reads and writes in a single response</li>
+                    <li><strong>Live Updates:</strong> Wired the frontend to re-render the table after each AI response without a full page reload</li>
+                    <li><strong>Flexible Data Model:</strong> Added a key-value details field so the tracker works for any industry — CDL-A, tech, healthcare, etc.</li>
+                    <li><strong>Alert System:</strong> Built color-coded alert callouts (amber/blue/red) so critical info is never buried in notes</li>
+                </ol>
+
+                <h3>Professional Outcome</h3>
+                <ul>
+                    <li>End-to-end full-stack application from API design to deployed frontend</li>
+                    <li>Practical experience integrating Claude's tool-use API in a production-style agentic loop</li>
+                    <li>Clean, installable PWA that works on mobile</li>
+                    <li>Demonstrates ability to ship a complete, usable product independently</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <h4>AI-Managed Tracker</h4>
+                        <p>All adds, edits, status changes, and notes happen through natural language chat. No forms, no manual data entry.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Rich Detail Panel</h4>
+                        <p>Click any row to see the full picture: pay range, schedule, requirements, benefits, recruiter contact, apply link, and industry-specific details.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Alert Callouts</h4>
+                        <p>Color-coded flags on each job — action items (amber), useful info (blue), disqualifiers and rejection reasons (red). Never lose track of why a listing was skipped.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>User Profile Memory</h4>
+                        <p>The AI remembers your background, qualifications, target salary, and preferences across every session without re-explaining yourself.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Live Table Updates</h4>
+                        <p>The tracker re-renders instantly after the AI modifies data — status changes and new entries appear without reloading the page.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>PWA-Ready</h4>
+                        <p>Installable on mobile via web app manifest. Filter by status: Interview, Call Recruiter, Applied, Rejected, Not Applied.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>How It Works</h2>
+                <p>The dashboard is a read-only view — you never fill out a form directly. All interaction goes through the AI Assistant. Example prompts:</p>
+                <ul>
+                    <li>"Add Northside Tech in Austin TX, $95K/yr, status Applied, remote-friendly, contact is Sarah at 555-1234"</li>
+                    <li>"Mark Acme Corp as Call Recruiter — interview scheduled for next week"</li>
+                    <li>"What jobs am I still waiting to hear back from?"</li>
+                    <li>"Reject the Globex position — the salary is too low and it's fully on-site"</li>
+                    <li>"Update my profile — I have 5 years of experience and I'm targeting $90K+"</li>
+                </ul>
+                <p>The AI reads and writes <code>jobs.json</code> directly via its tools. The table re-renders live after every change.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>Architecture</h2>
+                <p>The application is structured as a single FastAPI server that handles both the API and serves the frontend:</p>
+                <ul>
+                    <li><strong>main.py</strong> — FastAPI app with the agentic loop, all seven AI tools, and static file serving</li>
+                    <li><strong>frontend/index.html</strong> — Full app: live tracker table, AI chat panel, and detail slide-out</li>
+                    <li><strong>data/jobs.json</strong> — All job entries (AI reads and writes this directly)</li>
+                    <li><strong>data/profile.json</strong> — User profile injected into every AI session</li>
+                    <li><strong>docs/index.html</strong> — GitHub Pages static demo with AI disabled (pre-loaded sample data)</li>
+                </ul>
+                <p>Zero database required. The flat-file approach keeps self-hosting to a single <code>pip install</code> and one command.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>AI Capabilities</h2>
+                <p>The assistant has seven structured tools that Claude uses in an agentic loop — it can chain multiple operations in a single response:</p>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <h4>list_jobs</h4>
+                        <p>Read all job entries — used to answer status questions and generate summaries.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>get_job</h4>
+                        <p>Fetch full details for a single listing by ID.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>add_job</h4>
+                        <p>Create a new entry with all rich fields from a single natural language prompt.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>update_job</h4>
+                        <p>Change any field — status, pay range, notes, alerts, industry-specific details.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>delete_job</h4>
+                        <p>Remove an entry by name or ID.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>get_profile / update_profile</h4>
+                        <p>Read and update the saved user profile — background, qualifications, salary target, preferences.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Tech Stack</h2>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python 3.11+</span>
+                    <span class="skill-tag">FastAPI</span>
+                    <span class="skill-tag">Uvicorn</span>
+                    <span class="skill-tag">Anthropic Claude (tool use)</span>
+                    <span class="skill-tag">Vanilla HTML/CSS/JS</span>
+                    <span class="skill-tag">JSON (flat-file data)</span>
+                    <span class="skill-tag">PWA Manifest</span>
+                    <span class="skill-tag">GitHub Pages</span>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Skills Demonstrated</h2>
+                <ul>
+                    <li>Full-stack web application development (backend API + frontend)</li>
+                    <li>Agentic AI integration using Claude's tool-use API</li>
+                    <li>RESTful API design with FastAPI</li>
+                    <li>Real-time UI updates without a framework</li>
+                    <li>System prompt engineering for persistent user context</li>
+                    <li>Progressive Web App (PWA) implementation</li>
+                    <li>End-to-end product delivery — from concept to deployed demo</li>
+                    <li>Flexible data modeling for multi-industry use cases</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Project Links</h2>
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                    <a href="https://vfoster-repo.github.io/job-tracker-app/" target="_blank" class="btn btn-small btn-primary">Live Demo</a>
+                    <a href="https://github.com/vfoster-repo/job-tracker-app" target="_blank" class="btn btn-small btn-secondary">GitHub</a>
+                    <a href="all-projects.html" class="btn btn-small btn-secondary">Back to Projects</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Victor Foster. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
