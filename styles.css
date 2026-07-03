@@ -194,6 +194,17 @@ body {
     box-shadow: var(--shadow-md);
 }
 
+/* Secondary button on dark hero background */
+.hero .btn-secondary {
+    color: var(--white);
+    border-color: var(--white);
+}
+
+.hero .btn-secondary:hover {
+    background-color: var(--white);
+    color: var(--text-dark);
+}
+
 .btn-small {
     padding: 0.5rem 1.25rem;
     font-size: 0.9rem;
