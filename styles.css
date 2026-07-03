@@ -392,6 +392,7 @@ section {
     display: flex;
     gap: 1rem;
     padding: 0 2rem 2rem;
+}
 
 /* ===== Project Category Headers (All Projects page) ===== */
 .project-category-header {
