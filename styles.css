@@ -288,11 +288,12 @@ section {
 .project-card {
     background-color: var(--white);
     border-radius: 10px;
-    padding: 2rem;
+    padding: 0;
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .project-card:hover {
@@ -300,7 +301,42 @@ section {
     box-shadow: var(--shadow-lg);
 }
 
+/* Cards without images keep their internal padding */
+.project-card:not(:has(.project-card-image)) .project-header {
+    padding: 2rem 2rem 0;
+}
+
+.project-card:not(:has(.project-card-image)) .project-description,
+.project-card:not(:has(.project-card-image)) .project-tech {
+    padding: 0 2rem;
+}
+
+.project-card:not(:has(.project-card-image)) .project-links {
+    padding: 0 2rem 2rem;
+}
+
+.project-card-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.project-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    transition: var(--transition);
+}
+
+.project-card:hover .project-card-image img {
+    transform: scale(1.03);
+}
+
 .project-header {
+    padding: 1.5rem 2rem 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -329,6 +365,7 @@ section {
     margin-bottom: 1.5rem;
     flex-grow: 1;
     line-height: 1.6;
+    padding: 0 2rem;
 }
 
 .project-tech {
@@ -336,6 +373,7 @@ section {
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-bottom: 1.5rem;
+    padding: 0 2rem;
 }
 
 .tech-badge {
@@ -350,7 +388,7 @@ section {
 .project-links {
     display: flex;
     gap: 1rem;
-}
+    padding: 0 2rem 2rem;
 
 /* ===== Project Category Headers (All Projects page) ===== */
 .project-category-header {
