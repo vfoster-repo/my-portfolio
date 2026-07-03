@@ -845,8 +845,8 @@ section {
     }
 
     .profile-photo {
-        width: 180px;
-        height: 180px;
+        width: 220px;
+        height: 220px;
     }
 
     section {
@@ -858,7 +858,7 @@ section {
     }
 
     .project-card-image {
-        height: 150px;
+        height: 210px;
     }
 
     .project-detail-title {
