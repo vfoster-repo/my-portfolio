@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titanic Survival Prediction API | Victor Foster</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sticky Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">VF</a>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-detail-hero">
+        <div class="container">
+            <a href="all-projects.html" class="back-link">← Back to Projects</a>
+            <h1 class="project-detail-title">Titanic Survival Prediction API</h1>
+            <p class="project-detail-description">A machine learning API that predicts passenger survival on the Titanic using a Random Forest classifier, packaged in Docker and published on Docker Hub so anyone can run it with a single command</p>
+            <div class="project-detail-tech">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Docker</span>
+                <span class="tech-badge">FastAPI</span>
+                <span class="tech-badge">Scikit-learn</span>
+                <span class="tech-badge">Pandas</span>
+            </div>
+            <div class="project-detail-buttons">
+                <a href="https://github.com/vfoster-repo/ml-model-api-project" target="_blank" class="btn btn-small btn-primary">View on GitHub</a>
+                <a href="https://hub.docker.com/r/vfoster2docker/titanic-survival-api" target="_blank" class="btn btn-small btn-secondary">View on Docker Hub</a>
+                <a href="https://vfoster-repo.github.io/ml-model-api-project/" class="btn btn-small btn-secondary">View Notebook</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content">
+        <div class="container">
+            <div class="content-section">
+                <h2>Project Overview</h2>
+                <p><strong>Business Context:</strong> Taking a trained model off my own computer and turning it into a service that other people and applications can actually use.</p>
+                <p>In this project I trained a machine learning model from scratch, containerized it, and published it to Docker Hub. The model is trained inside a Jupyter Docker container, then served from a separate, lighter Docker container using FastAPI.</p>
+                <p>Anyone with Docker can pull the image and get survival predictions for a Titanic passenger through a simple API, without installing Python or any libraries.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>What This Demonstrates</h2>
+
+                <h3>Learning Challenge</h3>
+                <ul>
+                    <li>Docker was completely new to me: images, containers, Dockerfiles, volumes, and port mapping</li>
+                    <li>Keeping a training environment and a serving environment separate</li>
+                    <li>Building the project with current versions instead of the 2023 versions in the course instructions</li>
+                </ul>
+
+                <h3>Problem-Solving Process</h3>
+                <ol>
+                    <li><strong>Training Container:</strong> Built a custom Jupyter image with my ML libraries and mounted my project folder into it</li>
+                    <li><strong>Model Training:</strong> Cleaned the data, created new features, and trained a Random Forest classifier</li>
+                    <li><strong>Serving Container:</strong> Wrapped the saved model in a FastAPI app and packaged it into a slim Python image</li>
+                    <li><strong>Testing and Sharing:</strong> Tested the API locally, then tagged it and pushed it to Docker Hub</li>
+                    <li><strong>Debugging:</strong> Found and fixed several things in the instructions that broke on newer versions, like missing values that silently stopped getting filled in with pandas 3</li>
+                </ol>
+
+                <h3>Professional Outcome</h3>
+                <ul>
+                    <li>A complete ML deployment pipeline, from raw CSV to a public Docker image</li>
+                    <li>An API that checks its input and gives a clear error for bad values instead of a wrong prediction</li>
+                    <li>Updated the whole project from the 2023 course versions to current versions and fixed what broke</li>
+                </ul>
+
+                <h3>Tools Utilized</h3>
+                <ul>
+                    <li>VS Code with Claude Code for development</li>
+                    <li>Docker and Docker Hub for containers</li>
+                    <li>Jupyter Lab (running inside Docker) for training</li>
+                    <li>Git/GitHub for version control</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>API Endpoints</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <h4>GET /</h4>
+                        <p>Health check that shows whether the model loaded and its accuracy.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>POST /predict</h4>
+                        <p>Send one passenger's details and get back survived or not, the survival probability, and a confidence level.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>POST /predict-batch</h4>
+                        <p>Send a list of passengers and get a prediction for each one.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>GET /model-info</h4>
+                        <p>Model type, training date, accuracy, and the features it uses.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Dataset</h2>
+                <p>The model is trained on Kaggle's Titanic <strong>train.csv</strong> (891 passengers). The API takes 7 inputs:</p>
+                <ul>
+                    <li><strong>Pclass</strong> - Passenger class (1, 2, 3)</li>
+                    <li><strong>Sex</strong> - male or female</li>
+                    <li><strong>Age</strong> - Age in years</li>
+                    <li><strong>SibSp</strong> - Siblings/spouses aboard</li>
+                    <li><strong>Parch</strong> - Parents/children aboard</li>
+                    <li><strong>Fare</strong> - Ticket price</li>
+                    <li><strong>Embarked</strong> - Port: Cherbourg, Queenstown, or Southampton</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>How It Works</h2>
+                <ol>
+                    <li><strong>Training Container</strong> - Jupyter Lab image with pandas, scikit-learn, and the plotting libraries, with my project folder mounted as a volume</li>
+                    <li><strong>Data Cleaning</strong> - Fill in missing ages, fares, and ports</li>
+                    <li><strong>Feature Engineering</strong> - Family size, traveling alone, title from the name, age group, and fare group</li>
+                    <li><strong>Model Training</strong> - Random Forest with 20% of passengers held out for testing</li>
+                    <li><strong>Saving the Model</strong> - Model, encoders, and metadata saved with joblib and copied to the serving folder</li>
+                    <li><strong>Serving Container</strong> - Slim Python image running FastAPI, with a health check and a non-root user</li>
+                    <li><strong>Publishing</strong> - Tagged as v1.0 and latest, and pushed to Docker Hub</li>
+                </ol>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Results</h2>
+                <ul>
+                    <li><strong>Accuracy:</strong> about 82% (0.8156) on 179 test passengers</li>
+                    <li><strong>One-command setup:</strong> <code style="word-break: break-all;">docker run -p 8000:8000 vfoster2docker/titanic-survival-api</code></li>
+                    <li><strong>Input checking:</strong> bad values like "Male" with a capital M or class 4 get a clear error instead of a wrong prediction</li>
+                    <li><strong>Up to date:</strong> Python 3.13, pandas 3.0, scikit-learn 1.9, and the current Jupyter images</li>
+                </ul>
+                <p><em>Note: The full training run with charts is available in the notebook.</em></p>
+            </div>
+
+            <div class="content-section">
+                <h2>Skills Demonstrated</h2>
+                <ul>
+                    <li>Writing Dockerfiles for training and serving environments</li>
+                    <li>Docker volumes, port mapping, and container management</li>
+                    <li>Data cleaning and feature engineering</li>
+                    <li>Training and evaluating a classification model</li>
+                    <li>Saving and loading models with joblib</li>
+                    <li>Building a REST API with FastAPI and Pydantic</li>
+                    <li>Publishing images to Docker Hub with version tags</li>
+                    <li>Debugging version problems and documenting changes</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Technologies Used</h2>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python 3.13</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Docker Hub</span>
+                    <span class="skill-tag">Pandas</span>
+                    <span class="skill-tag">Scikit-learn</span>
+                    <span class="skill-tag">Matplotlib</span>
+                    <span class="skill-tag">Seaborn</span>
+                    <span class="skill-tag">FastAPI</span>
+                    <span class="skill-tag">Pydantic</span>
+                    <span class="skill-tag">Uvicorn</span>
+                    <span class="skill-tag">Jupyter Lab</span>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Project Links</h2>
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                    <a href="https://github.com/vfoster-repo/ml-model-api-project" target="_blank" class="btn btn-small btn-primary">GitHub</a>
+                    <a href="https://hub.docker.com/r/vfoster2docker/titanic-survival-api" target="_blank" class="btn btn-small btn-secondary">Docker Hub</a>
+                    <a href="https://vfoster-repo.github.io/ml-model-api-project/" class="btn btn-small btn-secondary">View Notebook</a>
+                    <a href="all-projects.html" class="btn btn-small btn-secondary">Back to Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Victor Foster. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
